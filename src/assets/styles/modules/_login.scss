@@ -1,0 +1,51 @@
+.userName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    &-title {
+      margin-bottom: 30px;
+    }
+    &-loginForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .input-field {
+        background: transparent;
+        outline: none;
+        border: 1px solid #FFF;
+        color: #FFF;
+        min-width: 300px;
+        border-radius: 8px;
+        height: 30px;
+        text-indent: 10px;
+        margin-bottom: 20px;
+        transition: all 0.5s ease-in-out;
+        &:focus {
+          border-radius: 50px;
+        }
+        &::placeholder {
+          color:#FFF;
+        }
+      }
+      .btnLogin {
+        appearance: none;
+        outline: none;
+        border: 1px dashed #FFF;
+        background: transparent;
+        color: #FFF;
+        min-width: 180px;
+        height: 40px;
+        border-radius: 50px;
+        transition: all 0.5s ease-in-out;
+    
+        &:hover {
+          background: #FFF;
+          color: #4AD395;
+          cursor: pointer;
+        }
+      }
+    }
+   }
