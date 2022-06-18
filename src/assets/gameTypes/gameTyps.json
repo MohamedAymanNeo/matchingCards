@@ -1,17 +1,15 @@
-{
-    "types": [
-        {
-            "type": "socail",
-            "icons": [
-                "facebook", "youtube", "instagram", "codepen", "linkedin", "twitter", "twitch", "github", "facebook", "youtube", "instagram", "codepen", "linkedin", "twitter", "twitch", "github"
-            ]
-        },
-        {
-            "type": "numbers",
-            "icons": [
-                "one", "two", "three", "four", "five", "six", "seven", "eight", "one", "two", "three", "four", "five", "six", "seven", "eight"
-            ]
-        }
-        
-    ]
-}
+[
+    {
+        "type": "socail",
+        "icons": [
+            "facebook", "youtube", "instagram", "codepen", "linkedin", "twitter", "twitch", "github", "facebook", "youtube", "instagram", "codepen", "linkedin", "twitter", "twitch", "github"
+        ]
+    },
+    {
+        "type": "numbers",
+        "icons": [
+            "one", "two", "three", "four", "five", "six", "seven", "eight", "one", "two", "three", "four", "five", "six", "seven", "eight"
+        ]
+    }
+    
+]

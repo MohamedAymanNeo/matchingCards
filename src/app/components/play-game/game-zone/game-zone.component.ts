@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FetchDataService } from 'src/app/services/fetch-data.service';
 
 @Component({
   selector: 'app-game-zone',
@@ -36,12 +37,13 @@ export class GameZoneComponent implements OnInit {
     { type: 'social', icons: ['facebook', 'youtube', 'instagram', 'codepen', 'linkedin', 'twitter', 'twitch', 'github', 'facebook', 'youtube', 'instagram', 'codepen', 'linkedin', 'twitter', 'twitch', 'github'] },
     { type: 'numbers', icons: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'] }
   ];
+  gameTypes:any;
   src: any;
   // socialIcons = ['facebook-square', 'youtube', 'instagram', 'codepen', 'linkedin', 'twitter', 'twitch', 'github', 'facebook-square', 'youtube', 'instagram', 'codepen', 'linkedin', 'twitter', 'twitch', 'github'];
   icon: any = []
   icons: any;
   realArray: any = [];
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private typesService: FetchDataService) {
     this.route.params.subscribe((res: any) => {
       this.type = res['slug'];
       this.shuffleIcons(this.type)
@@ -49,6 +51,29 @@ export class GameZoneComponent implements OnInit {
     
   }
   ngOnInit(): void {
+    this.typesService.fetchData().subscribe((dataTypes: any) => {
+      // this.gameTypes = JSON.parse(dataTypes)
+      console.log(dataTypes)
+      // console.log(this.gameTypes)
+      // this.gameTypes.map((type:any) => {
+      //   console.log(type);
+      // })
+      // dataTypes.map((type) => {
+        
+      // })
+      // for (let i = 0; i < dataTypes.length; i++) {
+      //   console.log(dataTypes[i]);
+        
+      // }
+      dataTypes.map((element: any) => {
+        console.log(element);
+        
+      })
+      // dataTypes.forEach((element:any) => {
+      //   console.log(element);
+        
+      // });
+    })
   }
 
   ngAfterViewInit(): void {
