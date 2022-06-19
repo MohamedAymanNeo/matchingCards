@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FetchDataService } from 'src/app/services/fetch-data.service';
 
 @Component({
   selector: 'app-game-type',
@@ -7,21 +8,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./game-type.component.scss']
 })
 export class GameTypeComponent implements OnInit {
-  types:any = [
-    {type: 'social', id: 'social'},
-    {type: 'numbers', id: 'numbers'},
-    {type: 'flags', id: 'flags'},
-    {type: 'animals', id: 'animals'},
-    {type: 'food', id: 'food'},
-  ]
-  constructor(private router: Router) { }
+  gameTypes: any= [];
+  constructor(private router: Router, private typesService: FetchDataService) { }
 
   ngOnInit(): void {
+    this.typesService.getTypes().subscribe((types: any) => {
+      this.gameTypes = types
+    })
   }
 
-  goToGame(value: any) {
-    // console.log(value);
-    
+  goToGame(value: any) {    
     this.router.navigate(['/game/',value])
   }
 

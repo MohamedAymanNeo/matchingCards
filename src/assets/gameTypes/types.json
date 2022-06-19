@@ -1,0 +1,7 @@
+[
+    {"type": "social", "id": "social"},
+    {"type": "numbers", "id": "numbers"},
+    {"type": "flags", "id": "flags"},
+    {"type": "animals", "id": "animals"},
+    {"type": "food", "id": "food"}
+]
