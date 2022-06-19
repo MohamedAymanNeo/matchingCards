@@ -1,0 +1,27 @@
+.typesPage {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-type {
+        margin-bottom: 20px;
+    }
+    &-text {
+        font-size: 28px;
+    }
+    &-typeBtn {
+        min-width: 180px;
+        height: 40px;
+        outline: none;
+        border: 1px solid #FFF;
+        background: transparent;
+        color: #FFF;
+        font-size: 20px;
+        border-radius: 8px;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
